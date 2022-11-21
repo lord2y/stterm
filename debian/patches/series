@@ -1,4 +1,6 @@
-0001-PATCH-st-patch-font2-Add-patch-for-st-0.8.5.patch
-0002-PATCH-st-add-solarized-color-dark.patch
-0003-PATCH-st-add-transparency.patch
-0004-PATCH-st-add-scrollback.patch
+0001-fix-buffer-overflow-when-handling-long-composed-inpu.patch
+
+personal/0001-PATCH-st-patch-font2-Add-patch-for-st-0.8.5.patch
+personal/0002-PATCH-st-add-solarized-color-dark.patch
+personal/0003-PATCH-st-add-transparency.patch
+personal/0004-PATCH-st-add-scrollback.patch
