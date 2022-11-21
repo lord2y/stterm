@@ -1,3 +1,9 @@
+stterm (0.9-1.1) UNRELEASED; urgency=medium
+
+  * Custom version 0.9-1.1
+
+ -- Alessandro Ratti <lord2y@gmail.com>  Mon, 21 Nov 2022 16:04:31 +0000
+
 stterm (0.9-1) unstable; urgency=medium
 
   * New upstream version 0.9
