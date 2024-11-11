@@ -1,7 +1,7 @@
-From 004407582c34360614c0ab06af4c7d95ab5185d3 Mon Sep 17 00:00:00 2001
-From: Alessandro Ratti <alessandro.ratti@gmail.com>
-Date: Tue, 1 Nov 2022 13:39:41 +0000
-Subject: [PATCH] [PATCH] [st][patch][font2] Add patch for st-0.8.5
+From 350fe5998831066d16f4b5da2617e86af5b69327 Mon Sep 17 00:00:00 2001
+From: Alessandro Ratti <lord2y@gmail.com>
+Date: Mon, 11 Nov 2024 13:48:56 +0100
+Subject: [PATCH 2/4] (font) Add font2
 
 ---
  config.def.h |   6 +++
@@ -9,7 +9,7 @@ Subject: [PATCH] [PATCH] [st][patch][font2] Add patch for st-0.8.5
  2 files changed, 107 insertions(+)
 
 diff --git a/config.def.h b/config.def.h
-index 91ab8ca..98e603c 100644
+index 83fc8e8..352baf4 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -6,6 +6,12 @@
@@ -18,18 +18,18 @@ index 91ab8ca..98e603c 100644
  static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
 +/* Spare fonts */
 +static char *font2[] = {
-+	"Fira Mono for Powerline:pixelsize=12:antialias=true:autohint=true",
-+	"MesloLGS NF:pixelsize=12:antialias=true:autohint=true",
++/*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
++/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
 +};
 +
  static int borderpx = 2;
  
  /*
 diff --git a/x.c b/x.c
-index 8a16faa..885324a 100644
+index 876561d..baa65aa 100644
 --- a/x.c
 +++ b/x.c
-@@ -157,6 +157,8 @@ static void xhints(void);
+@@ -158,6 +158,8 @@ static void xhints(void);
  static int xloadcolor(int, const char *, Color *);
  static int xloadfont(Font *, FcPattern *);
  static void xloadfonts(const char *, double);
@@ -38,7 +38,7 @@ index 8a16faa..885324a 100644
  static void xunloadfont(Font *);
  static void xunloadfonts(void);
  static void xsetenv(void);
-@@ -306,6 +308,7 @@ zoomabs(const Arg *arg)
+@@ -317,6 +319,7 @@ zoomabs(const Arg *arg)
  {
  	xunloadfonts();
  	xloadfonts(usedfont, arg->f);
@@ -46,7 +46,7 @@ index 8a16faa..885324a 100644
  	cresize(0, 0);
  	redraw();
  	xhints();
-@@ -1034,6 +1037,101 @@ xloadfonts(const char *fontstr, double fontsize)
+@@ -1066,6 +1069,101 @@ xloadfonts(const char *fontstr, double fontsize)
  	FcPatternDestroy(pattern);
  }
  
@@ -148,7 +148,7 @@ index 8a16faa..885324a 100644
  void
  xunloadfont(Font *f)
  {
-@@ -1131,6 +1229,9 @@ xinit(int cols, int rows)
+@@ -1163,6 +1261,9 @@ xinit(int cols, int rows)
  	usedfont = (opt_font == NULL)? font : opt_font;
  	xloadfonts(usedfont, 0);
  
@@ -159,5 +159,5 @@ index 8a16faa..885324a 100644
  	xw.cmap = XDefaultColormap(xw.dpy, xw.scr);
  	xloadcols();
 -- 
-2.35.1
+2.39.5
 

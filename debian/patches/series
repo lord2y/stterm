@@ -1,4 +1,4 @@
-personal/0001-PATCH-st-patch-font2-Add-patch-for-st-0.8.5.patch
-personal/0002-PATCH-st-add-solarized-color-dark.patch
-personal/0003-PATCH-st-add-transparency.patch
-personal/0004-PATCH-st-add-scrollback.patch
+personal/0001-PATCH-st-add-solarized-color-themes.patch
+personal/0002-font-Add-font2.patch
+personal/0003-font-Use-NotoSansM-NFP-and-Noto-Emoji.patch
+personal/0004-Add-scrollback.patch

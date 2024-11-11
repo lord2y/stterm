@@ -1,0 +1,31 @@
+From 62be3359617b4b50d88166f08806a8df643da64a Mon Sep 17 00:00:00 2001
+From: Alessandro Ratti <lord2y@gmail.com>
+Date: Mon, 11 Nov 2024 13:52:51 +0100
+Subject: [PATCH 3/4] (font) Use NotoSansM NFP and Noto Emoji
+
+---
+ config.def.h | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index 352baf4..0d6fab8 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -5,10 +5,12 @@
+  *
+  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+  */
+-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
++static char *font = "NotoSansM NFP:pixelsize=12:antialias=true:autohint=true";
+ /* Spare fonts */
+ static char *font2[] = {
+-/*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
++	"NotoSansM:pixelsize=12:antialias=true:autohint=true",
++	"Noto Color Emoji:pixelsize=12:antialias=true:autohint=true",
++	"Noto Emoji:pixelsize=12:antialias=true:autohint=true",
+ /*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
+ };
+ 
+-- 
+2.39.5
+
